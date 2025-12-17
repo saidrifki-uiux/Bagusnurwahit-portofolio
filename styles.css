@@ -756,12 +756,12 @@ footer {
 .screenshot-desc h3 {
   font-size: 1.25rem;
   margin-bottom: 12px;
-  color: #f9fafb;
+  color: #1f2937; /* gelap & jelas */
 }
 
 .screenshot-desc p {
-  color: #d1d5db;
-  line-height: 1.7;
+  color: #374151; /* abu gelap, aman dibaca */
+  line-height: 1.8;
 }
 
 /* =========================
@@ -776,4 +776,5 @@ footer {
     text-align: left;
   }
 }
+
 
