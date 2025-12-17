@@ -43,4 +43,49 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
     }
+    /* =========================
+   NAVBAR SCROLL EFFECT
+   ========================= */
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+/* =========================
+   ACTIVE LINK ON SCROLL
+   ========================= */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+function setActiveLink() {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", setActiveLink);
+
 });
