@@ -729,3 +729,51 @@ footer {
     row-gap: 8px;
   }
 }
+
+/* =========================
+   APP SHOWCASE (TAMPILAN APLIKASI)
+   ========================= */
+.screenshot-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.screenshot-detail img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.screenshot-detail img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.screenshot-desc h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #f9fafb;
+}
+
+.screenshot-desc p {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE APP VIEW
+   ========================= */
+@media (max-width: 768px) {
+  .screenshot-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-desc {
+    text-align: left;
+  }
+}
+
